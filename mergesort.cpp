@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 
 using std::cin;
 using std::cout;
@@ -8,6 +9,7 @@ using std::endl;
 using std::ifstream;
 using std::ofstream;
 using std::string;
+using std::vector;
 
 int main() {
 
@@ -20,5 +22,7 @@ int main() {
     getline(cin, inFileName);
     inputFile.open(inFileName);
   } while (!inputFile);
+
+  inputFile.close();
 
 }
