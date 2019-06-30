@@ -29,3 +29,6 @@
 
 .DS_Store
 .vscode
+\*.dSYM
+insertsort
+mergesort
