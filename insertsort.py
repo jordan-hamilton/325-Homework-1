@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 def openFile(fileName):
     with open(fileName, 'r') as file:
         contents = file.readlines()
