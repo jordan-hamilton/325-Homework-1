@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 
 
+# Open the file with the passed name as read only, using the readlines method to insert each line into a list, then
+# return the created list.
 def openFile(fileName):
     with open(fileName, 'r') as file:
         contents = file.readlines()
     return contents
 
 
+# Append each element in the passed list onto a new line, writing to a file with the name passed in the second argument
 def appendListToFile(listToWrite, fileName):
     with open(fileName, 'a') as file:
         for number in listToWrite:
@@ -14,6 +17,8 @@ def appendListToFile(listToWrite, fileName):
         file.write('\n')
 
 
+# Open the data.text file, convert the list created from each line into a list of integers, then append the result of
+# insertion sort into insert.txt
 def main():
     text = openFile('data.txt')
     for line in text:
@@ -23,6 +28,7 @@ def main():
         appendListToFile(insertionSort(toSort), 'insert.txt')
 
 
+# Insertion sort as adapted from psuedocode in Cormen, p. 18
 def insertionSort(numbers):
     for j, key in enumerate(numbers[1:], start=1):
         i = j - 1
